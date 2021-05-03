@@ -5,19 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ChatDialog.unity
     guid: 929f1f8fd70efb143acdd70984470f81
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menu.unity
     guid: 2af993f866a258e4fb5783186ef018f1
   - enabled: 1
     path: Assets/Scenes/GamePlay.unity
     guid: 8a02a1b2191b313459a3698b74763063
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Greenhouse.unity
     guid: ab5771caf2f0977428d80852232445fa
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Careers.unity
     guid: 530a6278f1d25fa4fb32e196fda170f9
   m_configObjects:
