@@ -25,3 +25,43 @@ MonoBehaviour:
     m_SpecifySize: 1
     m_Name: girlscouts
     m_Texture: {fileID: 2800000, guid: 4a8d21961db14544aa11cafa5d01e584, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5215305997272257959
+      m_GuidHigh: 7513119624610096062
+    m_SerializedTextureGuid:
+      m_GuidLow: 15511534188497279717
+      m_GuidHigh: 9324790451281850201
+    m_Size: {x: 0.073631845, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: marigold
+    m_Texture: {fileID: 2800000, guid: 2ab51ae50a29d74459ef9bb5824f6881, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5482470437562337143
+      m_GuidHigh: 5904335904256477086
+    m_SerializedTextureGuid:
+      m_GuidLow: 6878379955296591903
+      m_GuidHigh: 14732695254394785834
+    m_Size: {x: 0.09603175, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: flowers
+    m_Texture: {fileID: 2800000, guid: 499ee01fea205f742ad048d6460c75cc, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4734248209260422201
+      m_GuidHigh: 14054743809086239916
+    m_SerializedTextureGuid:
+      m_GuidLow: 10129970478848380623
+      m_GuidHigh: 8209942384492761643
+    m_Size: {x: 0.10878379, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: Fern
+    m_Texture: {fileID: 2800000, guid: c8f38ecfe27a8c942b521dbe1993ef71, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5161066306499750467
+      m_GuidHigh: 15129503855310787993
+    m_SerializedTextureGuid:
+      m_GuidLow: 14804508624588054614
+      m_GuidHigh: 7566767985353149179
+    m_Size: {x: 0.09634465, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: bonzai
+    m_Texture: {fileID: 2800000, guid: 0ac720562e28cd74fbcac568648f0269, type: 3}
