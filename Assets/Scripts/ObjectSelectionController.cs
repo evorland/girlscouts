@@ -66,11 +66,15 @@ public class ObjectSelectionController : MonoBehaviour
                     DebuggingTextUpdate("hit something", "hit");
                     //these game objects might need data? Make a new monobehavior? Might need a more specific object 
                     //ameObject foundObject = hitObject.transform.GetComponent<GameObject>();
+
+                    //if change to hitObject.GetComponent<BeaconObject>() != null
                     if(hitObject.collider.tag == "Beacons")
                     {
                         DebuggingTextUpdate("foundObject", hitObject.collider.tag);
                         ChangeSelectedObject(hitObject.collider.gameObject);
                     }
+                } else {
+                    UIManager.Instance.HideInfoPanel();
                 }
             }
         }
@@ -80,26 +84,28 @@ public class ObjectSelectionController : MonoBehaviour
     {
         //find all objects in screen 
         GameObject[] placedObjects;
+        BeaconObject beacon = null;
         placedObjects = GameObject.FindGameObjectsWithTag("Beacons");
-        DebuggingTextUpdate("change selected", selected.name);
+        //DebuggingTextUpdate("change selected", selected.name);
         // MeshRenderer meshRenderer = selected.GetComponent<MeshRenderer>();
         // meshRenderer.material.color = activeColor; 
         foreach (GameObject current in placedObjects)
         {   
-            MeshRenderer meshRenderer = current.GetComponent<MeshRenderer>();
-            if(selected != current) 
-            {
-                //DebuggingTextUpdate("not same as current", current.name);
-                meshRenderer.material.color = inactiveColor;
+            if(current.GetComponent<BeaconObject>() != null) {
+                beacon = current.GetComponent<BeaconObject>();
+                MeshRenderer meshRenderer = current.GetComponent<MeshRenderer>();
+                if(selected != current) 
+                {
+
+                    meshRenderer.material.color = inactiveColor;
+                }
+                else 
+                {
+                    //Pass beacon data to panel
+                    meshRenderer.material.color = activeColor;
+                    UIManager.Instance.ShowInfoPanel(beacon.info);
+                }
             }
-            else 
-            {
-               // DebuggingTextUpdate("same as current", selected.name);
-                meshRenderer.material.color = activeColor;  
-            }
-            
-            // if(displayOverlay)
-            //     current.ToggleOverlay();
         }
     }
 

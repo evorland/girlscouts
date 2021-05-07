@@ -77,6 +77,7 @@ public class ImageTracker : MonoBehaviour
 
         DebuggingTextUpdate("in object instantiation", addedImage.referenceImage.name);
         GameObject prefab = Instantiate<GameObject>(beaconPrefab, transform.parent);
+        SetupData(addedImage.referenceImage.name, prefab);
         prefab.transform.position = addedImage.transform.position;
         prefab.transform.rotation = addedImage.transform.rotation;
         spawnedPrefabs.Add(addedImage.referenceImage.name, prefab);
@@ -84,7 +85,7 @@ public class ImageTracker : MonoBehaviour
 
     public void UpdateNoneGameObject(ARTrackedImage updateImage)
     {
-           DebuggingTextUpdate("limited", updateImage.referenceImage.name);
+        DebuggingTextUpdate("limited", updateImage.referenceImage.name);
         for(int i = 0; i < spawnedPrefabs.Count; i++)
         {
             if(spawnedPrefabs.TryGetValue(updateImage.referenceImage.name, out GameObject prefab))
@@ -128,5 +129,25 @@ public class ImageTracker : MonoBehaviour
     private void DebuggingTextUpdate(string statusMessage, string name) {
         status.text = $"status: {statusMessage} image {name}";
         imageTrackedText.text =  $"{name}";
+    }
+
+    private void SetupData(string name, GameObject beacon) {
+
+        var data = beacon.GetComponent<BeaconObject>();
+        if(name == "marigold"){
+            data.info = "these flowers are pretty";
+        } 
+        if(name == "Fern"){
+            data.info = "why oddly capitalized?";
+        } 
+        if(name == "flowers"){
+            data.info = "remember it's mother's day this weekend";
+        }
+        if(name == "bonzai"){
+            data.info = "so zen";
+        } 
+
+        data.isFound = false;
+        DebuggingTextUpdate("added data for", name);
     }
 }
