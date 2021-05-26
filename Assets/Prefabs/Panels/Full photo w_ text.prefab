@@ -211,6 +211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2655360475296120820}
   - component: {fileID: 1200613801633587350}
+  - component: {fileID: 3477510109109249492}
   m_Layer: 5
   m_Name: SVG Image - Left Arrow
   m_TagString: Untagged
@@ -260,6 +261,14 @@ MonoBehaviour:
   m_Sprite: {fileID: 3286163911610860551, guid: 3c043e7f1054d4e468fa61869b872c67,
     type: 3}
   m_PreserveAspect: 0
+--- !u!222 &3477510109109249492
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3397775638456694476}
+  m_CullTransparentMesh: 1
 --- !u!1 &4488784324493888598
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,6 +441,7 @@ GameObject:
   - component: {fileID: 6897266488904138496}
   - component: {fileID: 8447113543113524933}
   - component: {fileID: 4629258693992985924}
+  - component: {fileID: 2144035166801640151}
   m_Layer: 5
   m_Name: Button - Back
   m_TagString: Untagged
@@ -541,7 +551,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1200613801633587350}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2144035166801640151}
+        m_TargetAssemblyTypeName: PanelTransition, Assembly-CSharp
+        m_MethodName: ShowPreviousPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2144035166801640151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5252986770051991441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 322b9afcfa4c9be4593d211a613a87f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentPanel: {fileID: 8904013456564686650}
 --- !u!1 &5292063672346950424
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,6 +587,7 @@ GameObject:
   m_Component:
   - component: {fileID: 40561998102667674}
   - component: {fileID: 9019263909128228806}
+  - component: {fileID: 7467910848942953389}
   m_Layer: 5
   m_Name: SVG Image
   m_TagString: Untagged
@@ -601,6 +637,14 @@ MonoBehaviour:
   m_Sprite: {fileID: 3286163911610860551, guid: cff635a4583b2c140862ef4430175e23,
     type: 3}
   m_PreserveAspect: 0
+--- !u!222 &7467910848942953389
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5292063672346950424}
+  m_CullTransparentMesh: 1
 --- !u!1 &5399129505096511717
 GameObject:
   m_ObjectHideFlags: 0
@@ -845,6 +889,7 @@ GameObject:
   - component: {fileID: 787569345321348697}
   - component: {fileID: 2163712249446678981}
   - component: {fileID: 6864790821828796939}
+  - component: {fileID: 5364097006527743640}
   m_Layer: 5
   m_Name: Button - Next
   m_TagString: Untagged
@@ -954,7 +999,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2163712249446678981}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5364097006527743640}
+        m_TargetAssemblyTypeName: PanelTransition, Assembly-CSharp
+        m_MethodName: ShowNextPanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5364097006527743640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6884290186308594310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 322b9afcfa4c9be4593d211a613a87f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentPanel: {fileID: 8904013456564686650}
 --- !u!1 &7281890475681927929
 GameObject:
   m_ObjectHideFlags: 0
