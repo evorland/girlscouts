@@ -4,13 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-//[RequireComponent(typeof(Text))]
 public class TabButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, IPointerExitHandler
 {
-    [SerializeField]
-    private TabGroup tabGroup;
-    [SerializeField]
-    private Text label;
+    public TabGroup tabGroup;
+    public Text label;
     [SerializeField]
     private RawImage img;
 
@@ -42,7 +39,7 @@ public class TabButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
     // Start is called before the first frame update
     void Start()
     {
-        tabGroup.Subscribe(this);
+
     }
 
     // Update is called once per frame
