@@ -52,9 +52,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eda50b997cd0aa4ba5dbd0f888b7f0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: 
-  soilPH: 
-  soilMoisture: 
+  title: Title
+  soilPH: 5.5 - 7.5
+  soilMoisture: 1" - 1-1/2" per week
+  lightNeeds: 10-12 hrs per day
+  seasonLegnth: 50-185 days
+  temp: "70\xB0 \u2013 85\xB0"
+  cropYield: 8lb per plant
 --- !u!222 &4409900146332091002
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -105,6 +109,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Moisture
       objectReference: {fileID: 0}
+    - target: {fileID: 2342639403203270447, guid: d38633e108886a34b804c0e70b818d23,
+        type: 3}
+      propertyPath: key
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342639403203270447, guid: d38633e108886a34b804c0e70b818d23,
+        type: 3}
+      propertyPath: label
+      value: Soil Moisture
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342639403203270447, guid: d38633e108886a34b804c0e70b818d23,
+        type: 3}
+      propertyPath: value
+      value: "1\" \u2013 1-1/2\" per week"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342639403203270447, guid: d38633e108886a34b804c0e70b818d23,
+        type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 4409900146332091005}
     - target: {fileID: 7455457488922159183, guid: d38633e108886a34b804c0e70b818d23,
         type: 3}
       propertyPath: m_Pivot.x
@@ -193,7 +217,7 @@ PrefabInstance:
     - target: {fileID: 7455457488922159183, guid: d38633e108886a34b804c0e70b818d23,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -98
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 7455457488922159183, guid: d38633e108886a34b804c0e70b818d23,
         type: 3}
@@ -240,6 +264,11 @@ PrefabInstance:
       propertyPath: value
       value: 5.5 - 7.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2342639403203270447, guid: d38633e108886a34b804c0e70b818d23,
+        type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 4409900146332091005}
     - target: {fileID: 7455457488922159183, guid: d38633e108886a34b804c0e70b818d23,
         type: 3}
       propertyPath: m_Pivot.x

@@ -6,9 +6,10 @@ using UnityEngine.UI;
 public class VegetableCardText : MonoBehaviour
 {
     [SerializeField]
-    public string label;
+    private VegetableCard parent;
+
     [SerializeField]
-    public string value;
+    private VegetableTextKeys key;
 
     [SerializeField]
     private Text labelComponent;
@@ -18,8 +19,9 @@ public class VegetableCardText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        labelComponent.text = label;
-        valueComponent.text = value;
+        var textAndLabel = parent.GetLabelAndValue(key);
+        labelComponent.text = textAndLabel.label;
+        valueComponent.text = textAndLabel.value;
     }
 
     // Update is called once per frame
