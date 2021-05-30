@@ -6,24 +6,24 @@ using UnityEngine.EventSystems;
 
 public class TabButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, IPointerExitHandler
 {
-    public TabGroup tabGroup;
+    public TabButtons tabButtons;
     public Text label;
     [SerializeField]
     private RawImage img;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        tabGroup.OnTabEnter(this);
+        tabButtons.OnTabEnter(this);
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        tabGroup.OnTabSelected(this);
+        tabButtons.OnTabSelected(this);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        tabGroup.OnTabExit(this);
+        tabButtons.OnTabExit(this);
     }
 
     public void OnSelected()

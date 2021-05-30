@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 765022097690968700}
   - component: {fileID: 765022097690968701}
   m_Layer: 5
-  m_Name: TabGroup
+  m_Name: TabButtons
   m_TagString: Untagged
   m_Icon: {fileID: 2800000, guid: e6ba28d981927334d810654e269939a2, type: 3}
   m_NavMeshLayer: 0
@@ -56,6 +56,7 @@ MonoBehaviour:
   backButton: {fileID: 3978954060130601857}
   buttonPrefab: {fileID: 1828108699940521905, guid: 9758a311b4dcfbd4a85725ce3ad8a780,
     type: 3}
+  arrowPadding: 50
   nextSceneName: Careers
   previousSceneName: Menu
 --- !u!1 &8199830611729868197

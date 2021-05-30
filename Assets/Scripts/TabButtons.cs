@@ -1,11 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class TabGroup : MonoBehaviour
+public class TabButtons : MonoBehaviour
 {
     [SerializeField]
     private List<GameObject> tabPages;
@@ -74,7 +72,7 @@ public class TabGroup : MonoBehaviour
     {
         foreach (TabButton button in tabButtons)
         {
-            if (selectedTab != null && button == selectedTab) { continue; }
+            if (button == selectedTab) { continue; }
             button.OnUnSelected();
         }
     }
@@ -82,11 +80,7 @@ public class TabGroup : MonoBehaviour
     public void NextTab()
     {
         var nextTabIndex = selectedTab.transform.GetSiblingIndex() + 1;
-        if (nextTabIndex == tabButtons.Count)
-        {
-            SceneManager.LoadScene(nextSceneName);
-        }
-        else
+        if (nextTabIndex != tabButtons.Count)
         {
             var nextSelectedTabIndex = tabButtons.FindIndex(button => button.transform.GetSiblingIndex() == nextTabIndex);
             OnTabSelected(tabButtons[nextSelectedTabIndex]);
@@ -96,11 +90,7 @@ public class TabGroup : MonoBehaviour
     public void BackTab()
     {
         var backTabIndex = selectedTab.transform.GetSiblingIndex() - 1;
-        if (backTabIndex == -1)
-        {
-            SceneManager.LoadScene(previousSceneName);
-        }
-        else
+        if (backTabIndex != -1)
         {
             var backSelectedTabIndex = tabButtons.FindIndex(button => button.transform.GetSiblingIndex() == backTabIndex);
             OnTabSelected(tabButtons[backSelectedTabIndex]);
@@ -146,7 +136,7 @@ public class TabGroup : MonoBehaviour
             // Set the new position
             rect.localPosition = new Vector3(newX, rect.localPosition.y, rect.localPosition.z);
 
-            button.tabGroup = this;
+            button.tabButtons = this;
             button.label.text = label;
 
             var isFirst = index == 0;
@@ -176,5 +166,6 @@ public class TabGroup : MonoBehaviour
         nextButton.onClick.AddListener(NextTab);
         backButton.onClick.AddListener(BackTab);
         GenerateButtons();
+        ResetTabs();
     }
 }
