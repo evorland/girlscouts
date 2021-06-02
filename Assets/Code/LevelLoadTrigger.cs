@@ -8,10 +8,13 @@ namespace AngryBirds.Example1
 {
     public class LevelLoadTrigger : MonoBehaviour
     {
-        public Event levelLoaded;
+        public Event spawnBirdEvent;
         public void Start()
         {
-            levelLoaded.Raise();
+            for(int i=0; i<5; i++)
+            {
+                spawnBirdEvent.Raise();
+            }
         }
     }
 }
