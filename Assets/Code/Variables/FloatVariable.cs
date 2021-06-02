@@ -1,13 +1,10 @@
 ﻿// ----------------------------------------------------------------------------
-// Unite 2017 - Game Architecture with Scriptable Objects
-// 
-// Author: Ryan Hipple
-// Date:   10/04/17
+// Float Variable
 // ----------------------------------------------------------------------------
 
 using UnityEngine;
 
-namespace RoboRyanTron.Unite2017.Variables
+namespace AngryBirds
 {
     [CreateAssetMenu]
     public class FloatVariable : ScriptableObject

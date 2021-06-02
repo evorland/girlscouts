@@ -1,14 +1,11 @@
 ﻿// ----------------------------------------------------------------------------
-// Unite 2017 - Game Architecture with Scriptable Objects
-// 
-// Author: Ryan Hipple
-// Date:   10/04/17
+// WASD Keyboard Script
 // ----------------------------------------------------------------------------
 
 using System;
 using UnityEngine;
 
-namespace RoboRyanTron.Unite2017.Variables
+namespace AngryBirds
 {
     public class KeyboardMover : MonoBehaviour
     {
@@ -36,12 +33,15 @@ namespace RoboRyanTron.Unite2017.Variables
         public FloatVariable MoveRate;
         public MoveAxis Horizontal = new MoveAxis(KeyCode.D, KeyCode.A);
         public MoveAxis Vertical = new MoveAxis(KeyCode.W, KeyCode.S);
+        public Transform Parent;
 
         private void Update()
         {
-            Vector3 moveNormal = new Vector3(Horizontal, Vertical, 0.0f).normalized;
+            transform.SetParent(Parent);
+            Vector2 moveNormal = new Vector2(Horizontal, Vertical).normalized;
 
-            transform.position += moveNormal*Time.deltaTime*MoveRate.Value;
+            // transform.position += moveNormal*Time.deltaTime*MoveRate.Value;
+            GetComponent<RectTransform>().anchoredPosition += moveNormal*Time.deltaTime*MoveRate.Value;
         }
     }
 }
