@@ -39,6 +39,8 @@ namespace AngryBirds
         {
             transform.SetParent(Parent);
             Vector2 moveNormal = new Vector2(Horizontal, Vertical).normalized;
+
+            // transform.position += moveNormal*Time.deltaTime*MoveRate.Value;
             GetComponent<RectTransform>().anchoredPosition += moveNormal*Time.deltaTime*MoveRate.Value;
         }
     }
