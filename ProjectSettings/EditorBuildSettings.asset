@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Menu.unity
     guid: 2af993f866a258e4fb5783186ef018f1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GamePlay.unity
     guid: 8a02a1b2191b313459a3698b74763063
   - enabled: 0
@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Careers.unity
     guid: 530a6278f1d25fa4fb32e196fda170f9
+  - enabled: 1
+    path: Assets/Scenes/Full photo with Text.unity
+    guid: bcdeba98e28548145840afbdb5142d93
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
       type: 2}
