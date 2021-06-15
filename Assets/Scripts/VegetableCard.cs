@@ -39,7 +39,7 @@ public class VegetableCard : MonoBehaviour
 
     public VegetableText GetLabelAndValue(VegetableTextKeys key)
     {
-        if(vegetableTextOptions == null)
+        if (vegetableTextOptions == null)
         {
             GenerateOptions();
         }
